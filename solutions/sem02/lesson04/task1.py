@@ -12,7 +12,8 @@ def pad_image(image: np.ndarray, pad_size: int) -> np.ndarray:
         
     elif image.ndim == 3:
         height, width, channel = image.shape
-        padded_image = np.zeros((height + 2 * pad_size, width + 2 * pad_size, channel), dtype=image.dtype)
+        padded_image = np.zeros((height + 2 * pad_size, width + 2 * pad_size, channel), 
+                                dtype=image.dtype)
         padded_image[pad_size:pad_size + height, pad_size:pad_size + width, :] = image
     
     return padded_image
@@ -30,7 +31,8 @@ def blur_image(
     
     if image.ndim == 2:
         height, width = image.shape
-        padded_image = np.zeros((height + 2 * pad_size, width + 2 * pad_size), dtype=image.dtype)
+        padded_image = np.zeros((height + 2 * pad_size, width + 2 * pad_size), 
+                                dtype=image.dtype)
         padded_image[pad_size:pad_size + height, pad_size:pad_size + width] = image
         
         result = np.zeros((height, width), dtype=image.dtype)
@@ -42,7 +44,8 @@ def blur_image(
     
     elif image.ndim == 3:
         height, width, channel = image.shape
-        padded_image = np.zeros((height + 2 * pad_size, width + 2 * pad_size, channel), dtype=image.dtype)
+        padded_image = np.zeros((height + 2 * pad_size, width + 2 * pad_size, channel), 
+                                dtype=image.dtype)
         padded_image[pad_size:pad_size + height, pad_size:pad_size + width, :] = image
 
         result = np.zeros((height, width, channel), dtype=image.dtype)
