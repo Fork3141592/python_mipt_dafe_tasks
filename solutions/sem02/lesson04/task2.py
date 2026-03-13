@@ -15,7 +15,7 @@ def get_dominant_color_info(
 
     max_pixels = 0
     best_color = 0
-    
+
     for current_color in range(256):
         if zeros[current_color] != 0:
             left = max(0, current_color - threshold + 1)
@@ -27,5 +27,5 @@ def get_dominant_color_info(
                 best_color = current_color
 
     percent = (max_pixels / pixels.size) * 100
-    
+
     return np.uint8(best_color), float(percent)

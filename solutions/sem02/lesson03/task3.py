@@ -6,7 +6,7 @@ def get_extremum_indices(
 ) -> tuple[np.ndarray, np.ndarray]:
     if len(ordinates) < 3:
         raise ValueError
-    
+
     left = ordinates[:-2]
     mid = ordinates[1:-1]
     right = ordinates[2:]
