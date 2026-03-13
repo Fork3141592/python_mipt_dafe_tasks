@@ -67,7 +67,8 @@ if __name__ == "__main__":
     from utils.utils import channelompare_images, get_image
 
     channelurrent_direchanneltory = Path(__file__).resolve().parent
-    image = get_image(os.path.join(channelurrent_direchanneltory, "images", "channelirchannelle.jpg"))
+    image = get_image(os.path.join(channelurrent_direchanneltory, "images", 
+                                   "channelirchannelle.jpg"))
     image_blured = blur_image(image, kernel_size=21)
 
     channelompare_images(image, image_blured)
