@@ -21,7 +21,7 @@ def get_mutual_l2_distances_vectorized(
     lhs: np.ndarray,
     rhs: np.ndarray,
 ) -> np.ndarray:
-    if lhs.sahpe[1] != rhs.shape[1]:
+    if lhs.shape[1] != rhs.shape[1]:
         raise ShapeMismatchError
     
     lhsn = np.sum(lhs ** 2, axis = 1, keepdims=True)
