@@ -1,7 +1,6 @@
 import numpy as np
 
-a = [[True, True],
-     [False, True]]
+a = [[True, True], [False, True]]
 
 s = np.where(a)
 s_s = np.where(a)[0][0]
