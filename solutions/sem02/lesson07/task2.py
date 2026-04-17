@@ -7,7 +7,6 @@ import numpy as np
 
 
 def visualize_mitral_regurgitation(json_path: str = "medic_data.json") -> None:
-
     json_path = Path(__file__).parent / "data" / "medic_data.json"
     with open(json_path, "r", encoding="utf-8") as file:
         data = json.load(file)
