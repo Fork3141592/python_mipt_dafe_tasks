@@ -1,15 +1,11 @@
 from collections import deque
-from functools import partial
 
 import matplotlib.pyplot as plt
 import numpy as np
-
 from IPython.display import HTML
 from matplotlib.animation import FuncAnimation
 
 
-
-    
 def animate_wave_algorithm(
     maze: np.ndarray,
     start: tuple[int, int],
@@ -170,7 +166,8 @@ if __name__ == "__main__":
 
     start = (2, 0)
     end = (5, 0)
-    save_path = "./solutions/sem02/lesson08/gifs/labyrinth.gif"  # Укажите путь для сохранения анимации
+    save_path = "./solutions/sem02/lesson08/gifs/labyrinth.gif"  
+    # Укажите путь для сохранения анимации
 
     animation = animate_wave_algorithm(maze, start, end, save_path)
     HTML(animation.to_jshtml())
